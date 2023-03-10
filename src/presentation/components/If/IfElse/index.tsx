@@ -1,9 +1,5 @@
-import { Fragment, FunctionComponent, ReactNode } from 'react';
+import React, { Fragment, PropsWithChildren } from 'react';
 
-export interface IfElseProps {
-  children: ReactNode;
-}
-
-export const IfElse: FunctionComponent<IfElseProps> = ({ children }) => {
-  return ( <Fragment>{children}</Fragment> );
-}
+export const IfElse: React.FC<PropsWithChildren> = ({ children }) => (
+  <Fragment>{children}</Fragment>
+);

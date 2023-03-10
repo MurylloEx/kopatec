@@ -34,9 +34,10 @@ export interface IfProps {
 }
 
 export const If: CompoundComponent<IfProps, IfCompound> = ({ children, value }) => {
-  const hasMultipleFlows = Array.isArray(children);
 
   const getFlowResult = useCallback((desiredFlow: IfThenType | IfElseType | IfElseIfType) => {
+    const hasMultipleFlows = Array.isArray(children);
+
     if (hasMultipleFlows) {
       const [thenFlow, ...elseFlows] = children;
 
@@ -45,27 +46,17 @@ export const If: CompoundComponent<IfProps, IfCompound> = ({ children, value }) 
       }
 
       return elseFlows.reduce((accumulator: ReactElement | null, flow: IfElseElseIfChildren) => {
-        if (accumulator) {
-          return accumulator;
-        }
-
-        if (flow.type === desiredFlow) {
-          return flow.type(flow.props);
-        }
-  
-        return accumulator;
+        return (flow.type === desiredFlow) && !accumulator
+          ? flow.type(flow.props)
+          : accumulator;
       }, null);
     }
 
-    if ((desiredFlow === IfThen) && (children.type === IfThen)) {
-      return children;
-    }
-    if ((desiredFlow === IfElse) && (children.type === IfElse)) {
-      return children;
-    }
+    const isSingleThenFlow = (desiredFlow === IfThen) && (children.type === IfThen);
+    const isSingleElseFlow = (desiredFlow === IfElse) && (children.type === IfElse);
 
-    return <Fragment />;
-  }, [hasMultipleFlows, children, value]);
+    return isSingleThenFlow || isSingleElseFlow ? children : <Fragment />;
+  }, [children]);
 
   return value 
     ? getFlowResult(IfThen) 
