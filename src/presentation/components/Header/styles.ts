@@ -18,11 +18,31 @@ const BottomRow = styled.div`
   padding: 24px 92px;
 `;
 
-const LogoImage = styled.img``;
+const LogoImage = styled.img`
+  width: 182px;
+  height: 40px;
+`;
+
+const TopLeftContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+`;
+
+const TopRightContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: right;
+  align-items: center;
+`;
 
 export const Styled = {
   Column,
   TopRow,
   BottomRow,
-  LogoImage
+  TopLeftContainer,
+  TopRightContainer,
+  LogoImage,
 };

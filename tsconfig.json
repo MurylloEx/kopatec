@@ -18,6 +18,8 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": "./",
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
     "paths": {
       "src/*": [ "./src/*" ]
     }

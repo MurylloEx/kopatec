@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { HomePage } from 'src/presentation/pages';
 

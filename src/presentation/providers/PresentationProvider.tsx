@@ -1,4 +1,3 @@
-import React from 'react';
 import { RouterProvider } from './RouterProvider';
 import { ProviderComponent } from 'src/core';
 import { InfrastructureProvider } from 'src/infrastructure';
