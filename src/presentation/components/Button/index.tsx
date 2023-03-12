@@ -4,8 +4,8 @@ import { ButtonLanguage } from './Language';
 import { ButtonLocation } from './Location';
 
 export interface ButtonCompound {
-  ButtonLanguage: typeof ButtonLanguage;
-  ButtonLocation: typeof ButtonLocation;
+  Language: typeof ButtonLanguage;
+  Location: typeof ButtonLocation;
 }
 
 export interface ButtonProps { }
@@ -18,5 +18,5 @@ export const Button: CompoundComponent<ButtonProps, ButtonCompound> = () => {
   );
 }
 
-Button.ButtonLanguage = ButtonLanguage;
-Button.ButtonLocation = ButtonLocation;
+Button.Language = ButtonLanguage;
+Button.Location = ButtonLocation;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Button } from 'src/presentation/components/Button';
 
 const Column = styled.div`
   display: flex;
@@ -38,6 +39,14 @@ const TopRightContainer = styled.div`
   align-items: center;
 `;
 
+const Language = styled(Button.Language)`
+  margin-right: 6px;
+`;
+
+const Location = styled(Button.Location)`
+  margin-left: 6px;
+`;
+
 export const Styled = {
   Column,
   TopRow,
@@ -45,4 +54,6 @@ export const Styled = {
   TopLeftContainer,
   TopRightContainer,
   LogoImage,
+  Language,
+  Location,
 };

@@ -1,5 +1,5 @@
 import { Fragment, FunctionComponent } from 'react';
-import { For, Header, If } from 'src/presentation/components';
+import { Button, For, Header, If } from 'src/presentation/components';
 
 export interface HomePageProps { }
 
@@ -8,6 +8,7 @@ export const HomePage: FunctionComponent<HomePageProps> = () => {
     <Fragment>
       <Header />
       <h1>Bienvenidos a la Web oficial de Kopatec SAC</h1>
+
     </Fragment>
   );
 }
