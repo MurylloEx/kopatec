@@ -1,4 +1,3 @@
-import React from 'react';
 import { DomainProvider, ProviderComponent } from 'src/core/domain';
 
 export const ApplicationProvider: ProviderComponent = ({ children }) => {

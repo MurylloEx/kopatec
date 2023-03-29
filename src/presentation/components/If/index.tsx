@@ -8,13 +8,13 @@ type IfThenType = typeof IfThen;
 type IfElseType = typeof IfElse;
 type IfElseIfType = typeof IfElseIf;
 
-export type IfThenChildren = ReactElement<IfThenType>;
-export type IfElseChildren = ReactElement<IfElseType>;
-export type IfElseIfChildren = ReactElement<IfElseIfType>;
-export type IfElseElseIfChildren = IfElseChildren | IfElseIfChildren;
+type IfThenChildren = ReactElement<IfThenType>;
+type IfElseChildren = ReactElement<IfElseType>;
+type IfElseIfChildren = ReactElement<IfElseIfType>;
+type IfElseElseIfChildren = IfElseChildren | IfElseIfChildren;
 
-export type IfThenElseChildren = [IfThenChildren, IfElseChildren];
-export type IfThenElseElseIfChildren = [IfThenChildren, ...IfElseElseIfChildren[]];
+type IfThenElseChildren = [IfThenChildren, IfElseChildren];
+type IfThenElseElseIfChildren = [IfThenChildren, ...IfElseElseIfChildren[]];
 
 export type IfChildren = 
   IfThenChildren | 
